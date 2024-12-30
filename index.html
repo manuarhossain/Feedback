@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW GOOD IS YOUR FEEDBACK?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bar {
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            display: inline-block;
+        }
+        .bar.red { background-color: red; }
+        .bar.blue { background-color: blue; }
+        .bar.grey { background-color: grey; }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #results, #results * {
+                visibility: visible;
+            }
+            #results {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HOW GOOD IS YOUR FEEDBACK?</h1>
+    <p>For each statement, click the button in the column that best describes you. Please answer questions as you actually are (rather than how you think you should be), and don't worry if some questions seem to score in the "wrong direction." When you are finished, please click the "Submit" button at the bottom of the test.</p>
+    <form id="survey-form">
+        <ul>
+            <li>
+                <h4>1. When I give feedback, I listen to what my team member says, and try to understand his or her perspective and feelings.</h4>
+                <label><input type="radio" name="question1" value="1"> Not at all</label>
+                <label><input type="radio" name="question1" value="2"> Rarely</label>
+                <label><input type="radio" name="question1" value="3"> Sometimes</label>
+                <label><input type="radio" name="question1" value="4"> Often</label>
+                <label><input type="radio" name="question1" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>2. I refer my team to our mission and vision statements, and let senior executives explain the company's overall direction and strategy. They do a much better job than I could.</h4>
+                <label><input type="radio" name="question2" value="5"> Not at all</label>
+                <label><input type="radio" name="question2" value="4"> Rarely</label>
+                <label><input type="radio" name="question2" value="3"> Sometimes</label>
+                <label><input type="radio" name="question2" value="2"> Often</label>
+                <label><input type="radio" name="question2" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>3. I familiarize myself with people's job descriptions, performance agreements, and performance reviews to prepare for feedback sessions.</h4>
+                <label><input type="radio" name="question3" value="1"> Not at all</label>
+                <label><input type="radio" name="question3" value="2"> Rarely</label>
+                <label><input type="radio" name="question3" value="3"> Sometimes</label>
+                <label><input type="radio" name="question3" value="4"> Often</label>
+                <label><input type="radio" name="question3" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>4. After I've given feedback, I leave people to make changes as they see fit.</h4>
+                <label><input type="radio" name="question4" value="5"> Not at all</label>
+                <label><input type="radio" name="question4" value="4"> Rarely</label>
+                <label><input type="radio" name="question4" value="3"> Sometimes</label>
+                <label><input type="radio" name="question4" value="2"> Often</label>
+                <label><input type="radio" name="question4" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>5. I make sure that my team members know how their jobs add value to the organization.</h4>
+                <label><input type="radio" name="question5" value="1"> Not at all</label>
+                <label><input type="radio" name="question5" value="2"> Rarely</label>
+                <label><input type="radio" name="question5" value="3"> Sometimes</label>
+                <label><input type="radio" name="question5" value="4"> Often</label>
+                <label><input type="radio" name="question5" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>6. I refer to specific incidents instead of generalizations when I give feedback.</h4>
+                <label><input type="radio" name="question6" value="1"> Not at all</label>
+                <label><input type="radio" name="question6" value="2"> Rarely</label>
+                <label><input type="radio" name="question6" value="3"> Sometimes</label>
+                <label><input type="radio" name="question6" value="4"> Often</label>
+                <label><input type="radio" name="question6" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>7. I follow up on the feedback that I provide.</h4>
+                <label><input type="radio" name="question7" value="1"> Not at all</label>
+                <label><input type="radio" name="question7" value="2"> Rarely</label>
+                <label><input type="radio" name="question7" value="3"> Sometimes</label>
+                <label><input type="radio" name="question7" value="4"> Often</label>
+                <label><input type="radio" name="question7" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>8. I use statements that help people understand the impact of their behavior.</h4>
+                <label><input type="radio" name="question8" value="1"> Not at all</label>
+                <label><input type="radio" name="question8" value="2"> Rarely</label>
+                <label><input type="radio" name="question8" value="3"> Sometimes</label>
+                <label><input type="radio" name="question8" value="4"> Often</label>
+                <label><input type="radio" name="question8" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>9. I know what my team members are working on, and I visit their workspaces often.</h4>
+                <label><input type="radio" name="question9" value="1"> Not at all</label>
+                <label><input type="radio" name="question9" value="2"> Rarely</label>
+                <label><input type="radio" name="question9" value="3"> Sometimes</label>
+                <label><input type="radio" name="question9" value="4"> Often</label>
+                <label><input type="radio" name="question9" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>10. I give feedback that focuses on what people need to improve or change.</h4>
+                <label><input type="radio" name="question10" value="5"> Not at all</label>
+                <label><input type="radio" name="question10" value="4"> Rarely</label>
+                <label><input type="radio" name="question10" value="3"> Sometimes</label>
+                <label><input type="radio" name="question10" value="2"> Often</label>
+                <label><input type="radio" name="question10" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>11. I give feedback based primarily on my observations and feelings, and I don't gather other opinions or facts.</h4>
+                <label><input type="radio" name="question11" value="5"> Not at all</label>
+                <label><input type="radio" name="question11" value="4"> Rarely</label>
+                <label><input type="radio" name="question11" value="3"> Sometimes</label>
+                <label><input type="radio" name="question11" value="2"> Often</label>
+                <label><input type="radio" name="question11" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>12. I talk to the person directly, remain calm, explain how I feel, and say what needs to change.</h4>
+                <label><input type="radio" name="question12" value="1"> Not at all</label>
+                <label><input type="radio" name="question12" value="2"> Rarely</label>
+                <label><input type="radio" name="question12" value="3"> Sometimes</label>
+                <label><input type="radio" name="question12" value="4"> Often</label>
+                <label><input type="radio" name="question12" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>13. I assess my team members' individual developmental needs.!</h4>
+                <label><input type="radio" name="question13" value="1"> Not at all</label>
+                <label><input type="radio" name="question13" value="2"> Rarely</label>
+                <label><input type="radio" name="question13" value="3"> Sometimes</label>
+                <label><input type="radio" name="question13" value="4"> Often</label>
+                <label><input type="radio" name="question13" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>14. I help my team members set clear objectives.</h4>
+                <label><input type="radio" name="question14" value="1"> Not at all</label>
+                <label><input type="radio" name="question14" value="2"> Rarely</label>
+                <label><input type="radio" name="question14" value="3"> Sometimes</label>
+                <label><input type="radio" name="question14" value="4"> Often</label>
+                <label><input type="radio" name="question14" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>15. I measure performance improvement with specific metrics.</h4>
+                <label><input type="radio" name="question15" value="1"> Not at all</label>
+                <label><input type="radio" name="question15" value="2"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="4"> Often</label>
+                <label><input type="radio" name="question15" value="5"> Very Often</label>
+            </li>
+        </ul>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
